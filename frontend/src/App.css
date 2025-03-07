@@ -1,0 +1,83 @@
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  /* gap: 10px; */
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input {
+  /* width: 100%; */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  width: 100%;
+}
+.btn-group input[type="button"] {
+  border-radius: 6px !important;
+}
+.table-responsive {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+}
+/* adiciona sombra  */
+
+.table-responsive tbody {
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  table thead {
+    display: none;
+  }
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+  table tr:not(:nth-last-child()) {
+    border-bottom: 1px solid #ccc;
+  }
+  table td {
+    text-align: right;
+    padding-left: 50%;
+    word-break: break-all;
+  }
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    padding-left: 1rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  table td button {
+    width: 100%;
+  }
+}
